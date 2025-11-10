@@ -1,0 +1,37 @@
+/* responsive-image-filter-gallery.css */
+:root { --gap: 1rem; max-width: 1200px; }
+*{box-sizing:border-box}
+body{font-family:system-ui,Segoe UI,Roboto,Arial;margin:0;padding:1rem;display:flex;flex-direction:column;align-items:center}
+header h1{text-align:center;margin:0 0 1rem}
+.gallery{
+  display:grid;
+  gap:var(--gap);
+  width:100%;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+figure{margin:0;display:flex;flex-direction:column;align-items:center}
+figure img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  transition: filter .35s ease, transform .35s ease;
+  display:block;
+  border-radius:8px;
+}
+/* different filters */
+figure:nth-child(1) img{filter: blur(3px)}
+figure:nth-child(2) img{filter: grayscale(100%)}
+figure:nth-child(3) img{filter: sepia(80%)}
+figure:nth-child(4) img{filter: brightness(.6)}
+figure:nth-child(5) img{filter: contrast(150%)}
+figure:nth-child(6) img{filter: hue-rotate(90deg)}
+
+/* on hover remove filter */
+figure:hover img{filter:none; transform:scale(1.02)}
+figcaption{margin-top:.5rem;font-size:.95rem;color:#333;text-align:center}
+
+/* small screens: stack into single column <600px */
+@media (max-width:600px){
+  .gallery{grid-template-columns: 1fr}
+  figure img{height:240px}
+}

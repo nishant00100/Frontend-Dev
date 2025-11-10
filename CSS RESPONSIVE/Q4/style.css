@@ -1,0 +1,12 @@
+/* responsive-typography.css */
+body{font-family:system-ui;margin:0;padding:3rem;display:flex;justify-content:center;align-items:center;min-height:100vh}
+.typography-section{text-align:center;max-width:900px;padding:2rem}
+h1{font-size: clamp(1.5rem, 4vw, 3rem);margin:0 0 1rem}
+p{font-size: clamp(1rem, 2vw, 1.5rem);line-height:1.6;margin:0}
+
+/* below 700px adjust line-height and spacing */
+@media (max-width:700px){
+  .typography-section{padding:1.25rem}
+  p{line-height:1.8}
+  h1{margin-bottom:.75rem}
+}

@@ -1,0 +1,23 @@
+/* responsive-cards.css */
+*{box-sizing:border-box}
+body{font-family:system-ui;margin:0;padding:2rem;background:#f0f2f5}
+.cards-wrapper{display:flex;gap:1rem;flex-wrap:wrap}
+.card{
+  flex:1 1 calc(25% - 1rem);
+  background:#fff;padding:1.5rem;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.06);
+  transition:background-color .2s ease, transform .18s ease;
+  min-width:220px;
+}
+
+/* hover change background color */
+.card:hover{background:#e8f0ff}
+
+/* Tablet: 2 columns (max-width:900px) */
+@media (max-width:900px){
+  .card{flex:1 1 calc(50% - 1rem)}
+}
+
+/* Mobile: 1 column (max-width:600px) */
+@media (max-width:600px){
+  .card{flex:1 1 100%}
+}
