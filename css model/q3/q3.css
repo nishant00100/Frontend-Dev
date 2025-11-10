@@ -1,0 +1,31 @@
+/* gradients.css */
+/* Fixed header and footer with full layout in between */
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,Helvetica;}
+body{min-height:100vh;display:flex;flex-direction:column;}
+.fixed-header, .fixed-footer{background:#0f172a;color:#fff;padding:12px;text-align:center;position:fixed;width:100%;z-index:10;}
+.fixed-header{top:0;}
+.fixed-footer{bottom:0;}
+main{margin-top:60px;margin-bottom:60px;}
+
+/* Linear gradient section */
+.linear{
+  min-height:60vh;
+  display:flex;flex-direction:column;justify-content:center;align-items:center;
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  color:#0f172a;
+  padding:40px;
+}
+
+/* Radial gradient section with background-attachment fixed */
+.radial{
+  min-height:60vh;
+  display:flex;flex-direction:column;justify-content:center;align-items:center;
+  background: radial-gradient(circle at center, #fff1b6, #ffd6a5 60%, #ffa7a7 100%);
+  padding:40px;
+  background-attachment: fixed; /* parallax-like effect when scrolling */
+  color:#0f172a;
+}
+
+/* basic heading styles */
+h2{margin-bottom:12px;}
+p{max-width:700px;text-align:center;}

@@ -1,0 +1,29 @@
+/* typography.css */
+/* Readable typography with various styles */
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family: 'Georgia', serif; background:#fffaf8; color:#111; padding:32px;}
+.article{max-width:800px;margin:0 auto;}
+
+/* headings */
+h1{font-family: 'Helvetica Neue', Arial, sans-serif;font-size:2rem;font-weight:700;margin-bottom:12px;}
+
+/* lead paragraph */
+.lead{font-size:1.125rem;line-height:1.8;letter-spacing:0.2px;color:#333;margin-bottom:14px;}
+
+/* strong, em, mark custom colors */
+strong{color:#0b4a6f; font-weight:800;}
+em{color:#6b6b6b; font-style:italic;}
+mark{background:#fff3b0;color:#222;padding:0 4px;border-radius:4px;}
+
+/* first-letter and first-line */
+article p::first-letter { font-size:2.2rem; font-weight:700; float:left; margin-right:8px; line-height:1; }
+article p::first-line { font-weight:600; }
+
+/* paragraph spacing for readability */
+article p { margin: 1rem 0; line-height:1.8; text-align:justify; letter-spacing:0.2px; }
+
+/* responsive font adjustments */
+@media (max-width:600px){
+  h1{font-size:1.6rem;}
+  .lead{font-size:1rem;}
+}

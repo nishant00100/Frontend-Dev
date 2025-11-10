@@ -1,0 +1,37 @@
+/* sizes.css */
+/* Center everything using Flexbox */
+* { box-sizing: border-box; margin:0; padding:0; font-family: Arial, sans-serif; }
+body { min-height: 100vh; display:flex; flex-direction:column; background:#fbfcfe; color:#111; }
+header, footer { text-align:center; padding:12px 0; }
+main.center {
+  display:flex;
+  gap:20px;
+  justify-content:center;
+  align-items:center; /* vertically center */
+  padding:24px;
+  flex-wrap:wrap;
+  flex:1;
+}
+
+/* Box A: fixed px sizes */
+.box { background:#fff; padding:16px; border-radius:8px; box-shadow:0 6px 16px rgba(2,6,23,0.06); text-align:center; }
+.box-a { width:300px; height:200px; background:#e8f4ff; }
+
+/* Box B: using viewport units and % */
+.box-b { width:30%; min-width:180px; height:40vh; background:#fff3e0; }
+
+/* Box C: relative units and min/max + overflow */
+.box-c {
+  width:20em; /* relative to font-size */
+  max-width:280px;
+  min-height:120px;
+  padding:1.5em;
+  background:#eafbe7;
+  overflow:auto; /* demonstrates overflow when content exceeds */
+}
+
+/* Responsive tweak: stack vertically and center on small screens */
+@media (max-width:700px){
+  main.center { flex-direction:column; align-items:center; }
+  .box-b { width:80%; height:30vh; }
+}

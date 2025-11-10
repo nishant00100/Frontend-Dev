@@ -1,0 +1,41 @@
+/* borders.css */
+/* Layout: horizontal alignment using Flexbox */
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+body { padding: 20px; background: #f7f9fb; color: #111; }
+
+header, footer { text-align: center; padding: 12px 0; }
+.container {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: stretch; /* make them equal height if content differs */
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+/* Base box style */
+.box {
+  width: 220px;
+  padding: 16px;
+  background: #fff;
+  transition: border-color 0.3s ease, transform 0.2s;
+  text-align: center;
+}
+
+/* Different border styles */
+.solid { border: 3px solid #0f172a; }
+.dashed { border: 3px dashed #0f172a; padding: 12px; }
+.double { border: 6px double #0f172a; }
+.groove { border: 4px groove #0f172a; }
+
+/* Rounded corners example */
+.rounded { border-radius: 16px; }
+
+/* Hover effect: change border color with smooth transition */
+.box:hover {
+  border-color: #ff6b6b;
+  transform: translateY(-6px);
+}
+
+/* small note text inside */
+.note { display:block; margin-top:8px; font-size:0.9rem; color:#555; }

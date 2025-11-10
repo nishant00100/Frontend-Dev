@@ -1,0 +1,41 @@
+/* selectors.css */
+/* Examples of advanced selectors with comments */
+
+/* attribute selector: selects input elements where type="text" */
+input[type="text"] {
+  border: 2px solid #0f172a;
+  padding: 6px;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+/* attribute prefix selector: href starts with https */
+a[href^="https"] {
+  color: #0b84ff;
+  font-weight: 700;
+}
+
+/* pseudo-class :hover */
+a:hover { text-decoration: underline; }
+
+/* pseudo-class :focus - when input is focused */
+input:focus { outline: 3px solid rgba(11,132,255,0.15); }
+
+/* nth-child example: style every odd list item */
+.items li:nth-child(odd) { background:#f3f6f8; padding:8px; }
+
+/* combinators */
+/* child combinator '>' - direct children of main that are nav */
+main > .links { margin: 12px 0; }
+
+/* adjacent sibling '+' - style anchor immediately after another anchor */
+.links a + a { margin-left: 8px; }
+
+/* general sibling '~' - style any li after .special */
+.items .special ~ li { color:#777; }
+
+/* pseudo-elements: before & after used to add decorative content */
+.items li::before { content: "• "; color:#ff6b6b; margin-right:6px; }
+.items li::after { content: attr(data-note); font-size:0.8rem; color:#999; margin-left:6px; }
+
+/* comments above explain each selector type */

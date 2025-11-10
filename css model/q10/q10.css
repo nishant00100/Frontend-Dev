@@ -1,0 +1,35 @@
+/* navbar.css */
+/* Horizontal navigation bar with transitions and responsive stacking */
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,Helvetica;}
+body{background:#fbfcfe;color:#111;min-height:100vh;display:flex;flex-direction:column;}
+.nav-wrap{background:#0f172a;padding:10px;}
+.nav{display:flex;justify-content:center;gap:12px;align-items:center;flex-wrap:wrap;}
+.nav-link{
+  color:#fff;padding:10px 14px;border-radius:6px;text-decoration:none;border:1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+/* hover transitions */
+.nav-link:hover{
+  background:rgba(255,255,255,0.06);
+  transform:translateY(-4px);
+  border-color:rgba(255,255,255,0.12);
+}
+
+/* active link highlight */
+.nav-link.active{
+  background:#ff6b6b;
+  box-shadow:0 6px 20px rgba(255,107,107,0.18);
+}
+
+/* main content spacing */
+.content{padding:40px;text-align:center;flex:1;}
+
+/* footer */
+.foot{text-align:center;padding:12px;background:#f1f5f9;margin-top:auto;}
+
+/* responsive: stack vertically below 700px */
+@media (max-width:700px){
+  .nav{flex-direction:column; gap:8px;}
+  .nav-link{width:90%;text-align:center;}
+}

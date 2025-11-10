@@ -1,0 +1,26 @@
+/* focusform.css */
+/* Center form and style outlines and focus */
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,Helvetica;}
+body{min-height:100vh;display:flex;align-items:center;justify-content:center;background:#f4f7fb;padding:20px;}
+.form{background:#fff;padding:24px;border-radius:10px;box-shadow:0 10px 30px rgba(2,6,23,0.08);width:320px;display:flex;flex-direction:column;gap:12px;}
+.form label{display:flex;flex-direction:column;font-size:0.95rem;color:#333;}
+.form input, .form textarea{
+  padding:10px;border-radius:8px;border:1px solid #d1d9e6;
+  outline: none; transition: box-shadow 0.18s ease, border-color 0.18s;
+}
+
+/* Various outline styles demonstration on focus */
+.form input:focus, .form textarea:focus{
+  border-color:#0b84ff;
+  box-shadow: 0 0 0 4px rgba(11,132,255,0.12); /* simulated outline using box-shadow */
+  outline-style: dashed; /* visible only if browser displays outline */
+  outline-color: #0b84ff;
+  outline-offset: 4px;
+}
+
+/* button styling */
+button{padding:10px;border-radius:8px;border:none;background:#0b84ff;color:#fff;font-weight:700;cursor:pointer;}
+button:hover{transform:translateY(-3px);}
+
+/* consistent spacing */
+.form > label { margin-bottom:4px; }
