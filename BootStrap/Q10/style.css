@@ -1,0 +1,12 @@
+/* travel-agency.css */
+.carousel img {
+  height: 480px;
+  object-fit: cover;
+}
+.carousel-caption h3 {
+  font-weight: 700;
+  text-shadow: 1px 1px 4px #000;
+}
+.progress {
+  height: 30px;
+}
