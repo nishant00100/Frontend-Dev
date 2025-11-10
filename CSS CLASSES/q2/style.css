@@ -1,0 +1,31 @@
+/* a2-tooltips.css - CSS-only tooltips */
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,Helvetica;}
+body{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#f8fafc;padding:24px;}
+header,footer{text-align:center;margin-bottom:12px;}
+.center{width:100%;max-width:900px;}
+.tool-row{display:flex;gap:24px;justify-content:center;align-items:center;flex-wrap:wrap;}
+
+/* tooltip container relative so tooltip absolutely positioned */
+.tooltip-wrap{position:relative;display:flex;align-items:center;justify-content:center;}
+.label{background:#0b84ff;color:#fff;padding:8px 12px;border-radius:6px;cursor:default;}
+
+/* tooltip hidden by default */
+.tooltip{
+  position:absolute;bottom:130%;left:50%;transform:translateX(-50%);
+  background:#111;color:#fff;padding:8px 10px;border-radius:6px;white-space:nowrap;
+  opacity:0;pointer-events:none;transition:opacity .3s ease, transform .3s ease;
+  box-shadow:0 8px 20px rgba(2,6,23,0.2);
+}
+
+/* small arrow */
+.tooltip::after{
+  content:"";position:absolute;top:100%;left:50%;transform:translateX(-50%);
+  border-width:6px;border-style:solid;border-color:#111 transparent transparent transparent;
+}
+
+/* show on hover */
+.tooltip-wrap:hover .tooltip,
+.tooltip-wrap:focus-within .tooltip{
+  opacity:1;transform:translateX(-50%) translateY(-6px);
+  pointer-events:auto;
+}

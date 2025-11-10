@@ -1,0 +1,16 @@
+/* a7-ui.css - simple UI components in a card-like container */
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,Helvetica;}
+body{min-height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#f7fbff,#fff7f3);padding:24px;}
+.card{width:100%;max-width:720px;background:#fff;padding:20px;border-radius:12px;box-shadow:0 12px 36px rgba(2,6,23,0.08);}
+
+/* controls layout using Flexbox */
+.controls{display:flex;gap:12px;align-items:center;margin-top:12px;}
+.controls input{flex:1;padding:10px;border-radius:8px;border:1px solid #e6eef6;}
+.controls select{padding:10px;border-radius:8px;border:1px solid #e6eef6;}
+.btns{display:flex;gap:8px;}
+button{padding:10px 12px;border-radius:8px;border:none;background:#f0f4f8;cursor:pointer;box-shadow:0 6px 18px rgba(2,6,23,0.04);}
+button.primary{background:#0b84ff;color:#fff;}
+button:focus{outline:3px solid rgba(11,132,255,0.12);outline-offset:4px;}
+
+/* responsive */
+@media (max-width:700px){ .controls{flex-direction:column;align-items:stretch;} }

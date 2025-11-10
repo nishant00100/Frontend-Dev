@@ -1,0 +1,18 @@
+/* a8-boxsize.css - demonstrates content-box vs border-box */
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,Helvetica;}
+body{background:#fbfdff;padding:24px;min-height:100vh;display:flex;flex-direction:column;align-items:center;}
+header, footer{text-align:center;margin-bottom:12px;}
+.center{display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap;max-width:900px;}
+
+/* default example uses content-box (browser default) */
+.example{background:#fff;padding:12px;border-radius:8px;box-shadow:0 8px 20px rgba(2,6,23,0.06);width:320px;}
+.example .box{width:200px;padding:24px;border:6px solid #0b84ff;background:#eaf4ff;overflow:auto;}
+
+/* border-box example overrides box-sizing for child */
+.borderbox .box{box-sizing:border-box;}
+
+/* notes */
+.note{max-width:320px;background:#fff;padding:12px;border-radius:8px;box-shadow:0 8px 20px rgba(2,6,23,0.04);}
+
+/* responsive */
+@media (max-width:720px){ .center{flex-direction:column;align-items:center;} }

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Box-Sizing Comparison</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><h1>box-sizing Comparison</h1></header>
+  <main class="center">
+    <section class="compare">
+      <div class="example default">
+        <h3>Default (content-box)</h3>
+        <div class="box">Content</div>
+      </div>
+
+      <div class="example borderbox">
+        <h3>border-box</h3>
+        <div class="box">Content</div>
+      </div>
+    </section>
+    <aside class="note">
+      <p>Both boxes have same width and padding; border-box includes padding in total width.</p>
+    </aside>
+  </main>
+  <footer><p>Resize window to see responsiveness.</p></footer>
+</body>
+</html>

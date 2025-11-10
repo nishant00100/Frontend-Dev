@@ -1,0 +1,20 @@
+/* a9-combined.css - combine pseudo-classes, transitions, transforms */
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,Helvetica;}
+body{min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:24px;background:#f8fbff;}
+header,footer{text-align:center;margin-bottom:12px;}
+.grid{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;align-items:center;}
+
+/* example buttons */
+.example{padding:12px 18px;border-radius:8px;border:none;background:#0b84ff;color:#fff;cursor:pointer;transition:transform .25s ease, background .25s ease, box-shadow .25s ease;box-shadow:0 8px 24px rgba(2,6,23,0.06);}
+
+/* hover: grow slightly, change color, add subtle shadow */
+.example:hover{transform:scale(1.06);background:#0a6ad1;box-shadow:0 18px 36px rgba(10,106,209,0.18);}
+
+/* active state */
+.example:active{transform:scale(0.98);}
+
+/* focus */
+.example:focus{outline:3px solid rgba(11,132,255,0.12);outline-offset:4px;}
+
+/* responsive */
+@media (max-width:700px){ .grid{flex-direction:column;} }

@@ -1,0 +1,32 @@
+/* a6-animations.css - three sample animations centered on page */
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,Helvetica;}
+body{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#f8fbff;padding:24px;}
+.anim-row{display:flex;gap:40px;align-items:center;justify-content:center;flex-wrap:wrap;}
+
+/* moving box */
+.box{width:80px;height:80px;background:#0b84ff;border-radius:8px;animation:moveX 2s ease-in-out infinite alternate;}
+
+/* bouncing ball */
+.ball{width:60px;height:60px;border-radius:50%;background:#ff6b6b;animation:bounce 1.2s cubic-bezier(.3,.8,.3,1) infinite;animation-delay:0.15s;}
+
+/* color changing text */
+.text{font-weight:700;font-size:1.2rem;padding:8px 12px;border-radius:6px;animation:colorShift 3s ease-in-out infinite;animation-direction:alternate;}
+
+/* keyframes */
+@keyframes moveX{
+  from{transform:translateX(0);}
+  to{transform:translateX(100px);}
+}
+@keyframes bounce{
+  0%{transform:translateY(0);}
+  50%{transform:translateY(-80px);}
+  100%{transform:translateY(0);}
+}
+@keyframes colorShift{
+  0%{background:#fff;color:#111;}
+  50%{background:#fff3b0;color:#ff6b6b;}
+  100%{background:#e6f0ff;color:#0b84ff;}
+}
+
+/* responsive */
+@media (max-width:700px){ .anim-row{flex-direction:column;gap:20px;} }

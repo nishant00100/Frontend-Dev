@@ -1,0 +1,25 @@
+/* a4-selectors.css - demonstrates element, class, id, attribute, and combinator selectors */
+
+/* element selector - applies to all <p> */
+p { color:#111; line-height:1.6; margin:8px 0; }
+
+/* class selector */
+.highlight { background:#fff6d6; padding:6px; border-radius:6px; }
+
+/* id selector - unique styling */
+#unique { color:#0b84ff; font-weight:700; }
+
+/* attribute selector - selects inputs with type="text" */
+input[type="text"] { padding:8px; border-radius:6px; border:1px solid #dcdcdc; }
+
+/* attribute prefix selector - href starting with https */
+a[href^="https"] { color:#0b84ff; font-weight:700; }
+
+/* child combinator '>' - direct p children of .parent */
+.parent > p { padding:6px; border-left:4px solid #e6eefc; }
+
+/* adjacent sibling '+' - element immediately after .parent */
+.parent + .after { font-style:italic; color:#555; }
+
+/* general sibling '~' - any sibling after .special (not used here, shown as comment) */
+/* .special ~ p { color: #777; } */

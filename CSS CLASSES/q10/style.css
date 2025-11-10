@@ -1,0 +1,18 @@
+/* a10-miniui.css - compact UI card with forms and effects */
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,Helvetica;}
+body{min-height:100vh;display:flex;flex-direction:column;background:#f7fbff;padding:24px;align-items:center;}
+.top{text-align:center;margin-bottom:12px;}
+.center{display:flex;align-items:center;justify-content:center;flex:1;width:100%;}
+.card{width:100%;max-width:420px;background:#fff;padding:18px;border-radius:12px;box-shadow:0 14px 40px rgba(2,6,23,0.08);}
+form{display:flex;flex-direction:column;gap:10px;}
+label{display:flex;flex-direction:column;font-size:0.95rem;color:#333;}
+input,textarea{padding:8px;border-radius:8px;border:1px solid #e6eef6;}
+input:focus,textarea:focus{outline:3px solid rgba(11,132,255,0.12);outline-offset:4px;}
+.row{display:flex;gap:8px;justify-content:flex-start;align-items:center;}
+.btn{padding:10px 12px;border-radius:8px;border:none;background:#0b84ff;color:#fff;cursor:pointer;box-shadow:0 8px 20px rgba(2,6,23,0.06);transition:transform .12s;}
+.btn:hover{transform:translateY(-4px);}
+.btn.outline{background:transparent;border:1px solid #0b84ff;color:#0b84ff;}
+img{margin-top:12px;border-radius:8px;align-self:flex-end;}
+.foot{text-align:center;margin-top:12px;}
+/* responsive */
+@media (max-width:480px){ .card{padding:14px;} .row{flex-direction:column;align-items:stretch;} }

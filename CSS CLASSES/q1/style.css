@@ -1,0 +1,27 @@
+/* a1-pseudo.css - Demonstrates :hover, :focus, :active, :nth-child */
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,Helvetica;}
+body{padding:20px;background:#f7fafc;color:#111;}
+header, footer{text-align:center;padding:12px 0;}
+.row{display:flex;gap:16px;justify-content:center;align-items:flex-start;flex-wrap:wrap;}
+
+/* item card */
+.item{background:#fff;padding:16px;border-radius:8px;box-shadow:0 6px 18px rgba(2,6,23,0.06);width:220px;text-align:center;}
+
+/* :hover - change link background */
+.item a{
+  display:inline-block;padding:8px 10px;border-radius:6px;text-decoration:none;background:#eef2ff;color:#0b4a6f;
+  transition:background .2s, transform .15s;
+}
+.item a:hover{background:#0b84ff;color:#fff;transform:translateY(-3px);}
+
+/* :focus - input focus styling */
+input{padding:8px;border-radius:6px;border:1px solid #d7e3f0;width:90%;}
+input:focus{outline:none;box-shadow:0 0 0 4px rgba(11,132,255,0.12);border-color:#0b84ff;}
+
+/* :active - button pressed */
+button{padding:8px 12px;border-radius:6px;border:none;background:#ff6b6b;color:#fff;cursor:pointer;transition:transform .08s;}
+button:active{transform:translateY(2px);}
+
+/* :nth-child example */
+.nth li{list-style:none;padding:6px;border-radius:4px;margin:6px 0;background:#f3f6f8;}
+.nth li:nth-child(odd){background:#e6f0ff;}
